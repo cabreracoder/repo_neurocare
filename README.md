@@ -1,2 +1,2 @@
 # repo_neurocare
-repositorio para el prpoyecto NeuroCare
+repositorio para el proyecto NeuroCare
