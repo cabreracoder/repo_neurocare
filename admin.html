@@ -54,10 +54,103 @@
         <section class="gestionUsuarios">
             <div class="encabezado">
                 <div>
-                    <h3>👤Gestión de Usuarios</h3>
+                    <h3>👤 Gestión de Usuarios</h3>
                     <p>Administra todos los usuarios del sistema: Pacientes, Médicos y Cuidadores.</p>
                 </div>
                 <button class="btnAgregar">+ Agregar Usuarios</button>
+            </div>
+
+            <div class="filtrosRoles">
+                <button class="btnFiltro activo">🏨 Pacientes (3)</button>
+                <button class="btnFiltro">🩺 Médicos (3)</button>
+                <button class="btnFiltro">❤️ Cuidadores (3)</button>
+            </div>
+
+            <div class="contenedorTabla">
+                <table class="tablaUsuarios">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Contacto</th>
+                            <th>Edad</th>
+                            <th>Diagnóstico</th>
+                            <th>Estado</th>
+                            <th>Fecha registro</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maria Elena Garcia</td>
+                            <td class="emailTabla">maria.garcia@gmail.com</td>
+                            <td>72 años</td>
+                            <td>Alzheimer Moderado</td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                            <td>13/10/2025</td>
+                            <td>
+                            <div class="contenedor-acciones">
+                                <button class="btnAccion btnEditar" title="Editar">
+                                    <i class="fa-solid fa-pen-to-square"></i> 📝
+                                </button>
+                                <button class="btnAccion btnEliminar" title="Eliminar">
+                                    <i class="fa-solid fa-trash-can"></i> 🗑️
+                                </button>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Roberto Fernandez</td>
+                            <td class="emailTabla">rober.fern12@gmail.com</td>
+                            <td>68 años</td>
+                            <td>Alzheimer Leve</td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                            <td>12/10/2025</td>
+                            <td>
+                            <div class="contenedor-acciones">
+                                <button class="btnAccion btnEditar" title="Editar">
+                                    <i class="fa-solid fa-pen-to-square"></i> 📝
+                                </button>
+                                <button class="btnAccion btnEliminar" title="Eliminar">
+                                    <i class="fa-solid fa-trash-can"></i> 🗑️
+                                </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Claudia Murcia</td>
+                            <td class="emailTabla">claudia.M@gmail.com</td>
+                            <td>56 años</td>
+                            <td>Alzheimer Severo</td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                            <td>12/10/2025</td>
+                            <td>
+                            <div class="contenedor-acciones">
+                                <button class="btnAccion btnEditar" title="Editar">
+                                    <i class="fa-solid fa-pen-to-square"></i> 📝
+                                </button>
+                                <button class="btnAccion btnEliminar" title="Eliminar">
+                                    <i class="fa-solid fa-trash-can"></i> 🗑️
+                                </button>
+                            </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
