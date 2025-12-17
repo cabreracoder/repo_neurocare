@@ -221,9 +221,9 @@ body {
     border-radius: 50%;
 }
 
-/* Color cuando el switch está activo (Morado) */
+/* Color cuando el switch está activo*/
 input:checked + .slider {
-    background-color: #7f86f1;
+    background-color: #12c247;
 }
 
 input:checked + .slider:before {
