@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroCare Dashboard</title>
+    <link rel="stylesheet" href="stylesAdmin.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="barra_superior">
+        <div class="logo">NEUROCARE</div>
+        <nav>
+            <ul>
+                <li><a href="#">Administración</a></li>
+                <li><a href="#">Analíticas</a></li>
+                <li><a href="#">Información</a></li>
+                <li><a href="#" class="active">Buscar pacientes</a></li>
+            </ul>
+        </nav>
+        <button class="btn-gestionar">Gestionar Usuarios</button>
+    </header>
+
+    <main class="perfilAdmin">
+        <section class="infoIcono">
+            <div class="avatar">JP</div>
+            <div class="infoPerfil">
+                <h2>Dr. Juan Perez <span class="recuadroAdmin">Administrador</span></h2>
+                <p class="email">📧 JuanPerez@gmail.com</p>
+                <p class="description">Control total del sistema NeuroCare. Gestiona usuarios, asigna roles y supervisa todas las operaciones de la plataforma.</p>
+            </div>
+            <button class="btn-editar">📝 Editar perfil</button>
+        </section>
+
+        <section class="roles">
+            <div class="tarjeta">
+                <h3>👥Total Pacientes</h3>
+                <p class="cantidad">3</p>
+                <p class="subtexto">Usuarios con rol de pacientes</p>
+            </div>
+            <div class="tarjeta">
+                <h3>🧑‍⚕️Equipo Médico</h3>
+                <p class="cantidad">3</p>
+                <p class="subtexto">Médicos especialistas</p>
+            </div>
+            <div class="tarjeta">
+                <h3>❤️Cuidadores</h3>
+                <p class="cantidad">3</p>
+                <p class="subtexto">Personal de cuidado</p>
+            </div>
+        </section>
+
+        <section class="gestionUsuarios">
+            <div class="encabezado">
+                <div>
+                    <h3>👤Gestión de Usuarios</h3>
+                    <p>Administra todos los usuarios del sistema: Pacientes, Médicos y Cuidadores.</p>
+                </div>
+                <button class="btnAgregar">+ Agregar Usuarios</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
