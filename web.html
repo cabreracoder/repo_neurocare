@@ -4,177 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeuroCare - Iniciar Sesión</title>
+    <link rel="stylesheet" href="web.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f4f8;
-            padding: 20px;
-        }
-
-        #contenedor-principal {
-            display: flex; 
-            max-width: 900px; 
-            width: 100%;
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
-            overflow: hidden; 
-        }
-        #columna-izquierda {
-            width: 45%;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; 
-            background-color: #f7f9fc; 
-        }
-        #caja-imagen {
-            width: 100%;
-            padding-top: 100%; 
-            background-image: url('https://images.unsplash.com/photo-1560392934-94512cfbd875?q=80&w=1034&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Reemplazar con URL de imagen real */
-            background-size: cover;
-            background-position: center;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-          #caja-imagen2  {
-            width: 34%;
-            padding-top:10% ;
-            background-image: url('imagen.jpeg');
-            background-size: cover;
-            border-radius: 0;
-            margin-left: 20px;
-          }
-        #columna-derecha {
-            width: 55%;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        #caja-imagen3  {
-            width: 50%;
-            padding-top:15% ;
-            background-image: url('imagen.jpeg');
-            background-size: cover;
-            border: 1px;
-            height: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-          }
-        .h2-titulo {
-            color: #1e293b;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        .p-subtitulo {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-        .input-group {
-            margin-bottom: 20px;
-        }
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #475569;
-            font-weight: 600;
-        }
-        .input-field {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e1;
-            border-radius: 10px;
-            box-sizing: border-box; 
-            transition: border-color 0.3s;
-        }
-        .input-field:focus {
-            border-color: #3b82f6;
-            outline: none;
-        }
-        
-        
-        .boton {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        #btn-iniciar {
-            background-color: #38bdf8; 
-            color: white;
-        }
-        #btn-medico {
-            background-color: #e0f2fe; 
-        }
-        
-        #enlace-registro {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 14px;
-            color: #64748b;
-        }
-        #enlace-registro a {
-            color: #3b82f6;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            #contenedor-principal {
-                flex-direction: column; 
-                max-width: 400px;
-            }
-            #columna-izquierda, #columna-derecha {
-                width: 100%; 
-                padding: 20px;
-            }
-            #columna-izquierda {
-         
-                 display: none; 
-            }
-            
-        }
     </style>
 </head>
 <body>
 
     <div id="contenedor-principal">
         
-       
         <div id="columna-izquierda">
             <div id="caja-imagen"></div>
             <div id="caja-imagen2"></div>
             <div id="seccion-info">
-            
-            
-                
                 <p style="margin-top: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
                     Sistema integral para el cuidado y seguimiento de personas con Alzheimer. Ayudamos a profesionales de la salud y cuidadores a brindar la mejor atención personalizada.
                 </p>
             </div>
         </div>
 
-      
         <div id="columna-derecha">
-            
-         
+
             <div id="caja-imagen3"></div>
             
             <h2 class="h2-titulo">Iniciar Sesión</h2>
@@ -185,13 +34,11 @@
                 <input type="email" id="correo" class="input-field" placeholder="angelapabon@gmail.com">
             </div>
 
-          
             <div class="input-group">
                 <label for="contrasena">contraseña</label>
                 <input type="password" id="contrasena" class="input-field" placeholder="**">
             </div>
 
-         
             <button id="btn-iniciar" class="boton">
                 Iniciar sesión
             </button>
