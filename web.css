@@ -8,14 +8,10 @@ body {
     background: linear-gradient(135deg, #dbeafe, #f0f4f8);
     padding: 20px;
 }
-
-/* Animación de aparición suave */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-/* Contenedor */
 #contenedor-principal {
     display: flex; 
     max-width: 900px; 
@@ -40,8 +36,6 @@ body {
     justify-content: space-between; 
     background-color: #f7f9fc; 
 }
-
-/* imágenes */
 #caja-imagen {
     width: 100%;
     padding-top: 100%; 
@@ -73,8 +67,6 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-
-/* logo/imagen 3 */
 #caja-imagen3 {
     width: 50%;
     padding-top: 15%;
@@ -83,8 +75,6 @@ body {
     height: 20px;
     margin: 0 auto;
 }
-
-/* texto */
 .h2-titulo {
     color: #1e293b;
     font-size: 26px;
@@ -97,8 +87,6 @@ body {
     font-size: 15px;
     margin-bottom: 30px;
 }
-
-/* inputs */
 .input-group {
     margin-bottom: 20px;
     animation: fadeIn 1.2s ease-in-out;
@@ -127,8 +115,6 @@ body {
     transform: scale(1.02);
     outline: none;
 }
-
-/* botones */
 .boton {
     width: 100%;
     padding: 12px;
@@ -159,8 +145,6 @@ body {
     background-color: #bae6fd;
     transform: scale(1.05);
 }
-
-/* enlace */
 #enlace-registro {
     text-align: center;
     margin-top: 25px;
@@ -177,8 +161,6 @@ body {
 #enlace-registro a:hover {
     text-decoration: underline;
 }
-
-/* responsive */
 @media (max-width: 768px) {
     #contenedor-principal {
         flex-direction: column; 
