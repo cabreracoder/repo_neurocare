@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroCare Dashboard</title>
+    <link rel="stylesheet" href="stylesAdmin.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="barra_superior">
+        <div class="logo">NEUROCARE</div>
+        <nav>
+            <ul>
+                <li><a href="./admin.html">Administración</a></li>
+                <li><a href="../analitica">Analíticas</a></li>
+                <li><a href="./infromacion">Información</a></li>
+                <li><a href="#" class="active">Buscar pacientes</a></li>
+            </ul>
+        </nav>
+        <button class="btn-gestionar">Gestionar Usuarios</button>
+    </header>
+
+    <main class="perfilAdmin">
+        <section class="infoIcono">
+            <div class="avatar">JP</div>
+            <div class="infoPerfil">
+                <h2>Dr. Juan Perez <span class="recuadroAdmin">Administrador</span></h2>
+                <p class="email">📧 JuanPerez@gmail.com</p>
+                <p class="description">Control total del sistema NeuroCare. Gestiona usuarios, asigna roles y supervisa todas las operaciones de la plataforma.</p>
+            </div>
+            <button class="btn-editar">📝 Editar perfil</button>
+        </section>
+
+        <section class="roles">
+            <div class="tarjeta">
+                <h3>👥Total Pacientes</h3>
+                <p class="cantidad">3</p>
+                <p class="subtexto">Usuarios con rol de pacientes</p>
+            </div>
+            <div class="tarjeta">
+                <h3>🧑‍⚕️Equipo Médico</h3>
+                <p class="cantidad">3</p>
+                <p class="subtexto">Médicos especialistas</p>
+            </div>
+            <div class="tarjeta">
+                <h3>❤️Cuidadores</h3>
+                <p class="cantidad">3</p>
+                <p class="subtexto">Personal de cuidado</p>
+            </div>
+        </section>
+
+        <section class="gestionUsuarios">
+            <div class="encabezado">
+                <div>
+                    <h3>👤 Gestión de Usuarios</h3>
+                    <p>Administra todos los usuarios del sistema: Pacientes, Médicos y Cuidadores.</p>
+                </div>
+                <button class="btnAgregar">+ Agregar Usuarios</button>
+            </div>
+
+            <div class="filtrosRoles">
+                <button class="btnFiltro activo">🏨 Pacientes (3)</button>
+                <button class="btnFiltro">🩺 Médicos (3)</button>
+                <button class="btnFiltro">❤️ Cuidadores (3)</button>
+            </div>
+
+            <div class="contenedorTabla">
+                <table class="tablaUsuarios">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Contacto</th>
+                            <th>Edad</th>
+                            <th>Diagnóstico</th>
+                            <th>Estado</th>
+                            <th>Fecha registro</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maria Elena Garcia</td>
+                            <td class="emailTabla">maria.garcia@gmail.com</td>
+                            <td>72 años</td>
+                            <td>Alzheimer Moderado</td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                            <td>13/10/2025</td>
+                            <td>
+                            <div class="contenedor-acciones">
+                                <button class="btnAccion btnEditar" title="Editar">
+                                    <i class="IconoEditar"></i> 📝
+                                </button>
+                                <button class="btnAccion btnEliminar" title="Eliminar">
+                                    <i class="IconoEliminar"></i> 🗑️
+                                </button>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Roberto Fernandez</td>
+                            <td class="emailTabla">rober.fern12@gmail.com</td>
+                            <td>68 años</td>
+                            <td>Alzheimer Leve</td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                            <td>12/10/2025</td>
+                            <td>
+                            <div class="contenedor-acciones">
+                                <button class="btnAccion btnEditar" title="Editar">
+                                    <i class="IconoEditar"></i> 📝
+                                </button>
+                                <button class="btnAccion btnEliminar" title="Eliminar">
+                                    <i class="IconoEliminar"></i> 🗑️
+                                </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Claudia Murcia</td>
+                            <td class="emailTabla">claudia.M@gmail.com</td>
+                            <td>56 años</td>
+                            <td>Alzheimer Severo</td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                            <td>12/10/2025</td>
+                            <td>
+                            <div class="contenedor-acciones">
+                                <button class="btnAccion btnEditar" title="Editar">
+                                    <i class="IconoEditar"></i> 📝
+                                </button>
+                                <button class="btnAccion btnEliminar" title="Eliminar">
+                                    <i class="IconoEliminar"></i> 🗑️
+                                </button>
+                            </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
