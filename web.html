@@ -39,14 +39,18 @@
                 <input type="password" id="contrasena" class="input-field" placeholder="**">
             </div>
 
-            <button id="btn-iniciar" class="boton">
+            <button id="btn_iniciar" class="boton">
                 Iniciar sesión
             </button>
 
             <button id="btn-medico" class="boton">
                 Acceso Médico
             </button>
-
+                <script>
+            document.getElementById("btn_iniciar").addEventListener("click", function () {
+             window.location.href = "admin.html";
+            });
+                </script>
             <div id="enlace-registro">
                 ¿No tienes cuenta? <a href="#">Regístrate Aquí</a>
             </div>
@@ -54,6 +58,5 @@
         </div>
 
     </div>
-
 </body>
 </html>
