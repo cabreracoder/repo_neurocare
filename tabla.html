@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal de Edición de Paciente</title>
+    
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center;    
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.1); 
+            padding: 20px;
+        }
+
+        #modal-paciente {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+            max-width: 650px;
+            width: 100%;
+        }
+
+        #modal-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd; 
+        }
+        #modal-header h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+        #modal-header p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        #formulario-campos {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-between;
+        }
+
+        .input-group {
+            width: 48%; 
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .input-text, .input-simulado {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        .input-simulado {
+            background-color: #eef2f8; 
+            border-color: #d1d5db;
+            color: #4b5563;
+        }
+
+        #modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px; 
+            margin-top: 10px;
+        }
+        
+        .boton {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+        
+        #btn-cancelar {
+            background-color: #f3f4f6;
+            color: #4b5563;
+            border: 1px solid #d1d5db;
+        }
+        #btn-cancelar:hover {
+            background-color: #e5e7eb;
+        }
+
+        #btn-guardar {
+            background-color: #ffffff;
+            color: #4b5563;
+            box-shadow: 0 2px 5px rgba(56, 189, 248, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #btn-guardar:hover {
+            background-color: #0ea5e9;
+        }
+
+        @media (max-width: 600px) {
+            #modal-paciente {
+                padding: 20px;
+            }
+            .input-group {
+                width: 100%;
+            }
+            #modal-footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .boton {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="modal-paciente">
+
+        <div id="modal-header">
+            <h2>Editar Paciente</h2>
+            <p>Modifique los datos del usuario seleccionado.</p>
+        </div>
+
+        <div id="formulario-campos">
+            
+        
+            <div class="input-group">
+                <label for="nombre">Nombre Completo *</label>
+                <div class="input-simulado" id="nombre">María Elena García</div>
+            </div>
+
+            <div class="input-group">
+                <label for="rol">Rol *</label>
+                <div class="input-simulado" id="rol">Paciente</div>
+            </div>
+
+            <div class="input-group">
+                <label for="correo">Correo Electrónico *</label>
+                <div class="input-simulado" id="correo">maria.garcia@gmail.com</div>
+            </div>
+
+            <div class="input-group">
+                <label for="diagnostico">Diagnóstico *</label>
+                <div class="input-simulado" id="diagnostico">Alzheimer Moderado</div>
+            </div>
+
+            <div class="input-group">
+                <label for="edad">Edad *</label>
+                <div class="input-simulado" id="edad">72 años</div>
+            </div>
+            
+            <div class="input-group" style="visibility: hidden;">
+                <label>&nbsp;</label>
+                <div class="input-simulado">&nbsp;</div>
+            </div>
+
+        </div>
+
+        <div id="modal-footer">
+            <button class="boton" id="btn-cancelar">CANCELAR</button>
+            
+            <button class="boton" id="btn-guardar">
+                <span style="font-size: 16px;"></span> GUARDAR CAMBIOS
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>

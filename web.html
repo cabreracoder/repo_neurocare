@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroCare - Iniciar Sesión</title>
+    <link rel="stylesheet" href="web.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div id="contenedor-principal">
+        
+        <div id="columna-izquierda">
+            <div id="caja-imagen"></div>
+            <div id="caja-imagen2"></div>
+            <div id="seccion-info">
+                <p style="margin-top: 20px; color: #475569; font-size: 14px; line-height: 1.5;">
+                    Sistema integral para el cuidado y seguimiento de personas con Alzheimer. Ayudamos a profesionales de la salud y cuidadores a brindar la mejor atención personalizada.
+                </p>
+            </div>
+        </div>
+
+        <div id="columna-derecha">
+
+            <div id="caja-imagen3"></div>
+            
+            <h2 class="h2-titulo">Iniciar Sesión</h2>
+            <p class="p-subtitulo">Accede a tu panel de administrador</p>
+
+            <div class="input-group">
+                <label for="correo">correo electrónico</label>
+                <input type="email" id="correo" class="input-field" placeholder="angelapabon@gmail.com">
+            </div>
+
+            <div class="input-group">
+                <label for="contrasena">contraseña</label>
+                <input type="password" id="contrasena" class="input-field" placeholder="**">
+            </div>
+
+            <button id="btn_iniciar" class="boton">
+                Iniciar sesión
+            </button>
+
+            <button id="btn-medico" class="boton">
+                Acceso Médico
+            </button>
+                <script>
+            document.getElementById("btn_iniciar").addEventListener("click", function () {
+             window.location.href = "admin.html";
+            });
+                </script>
+            <div id="enlace-registro">
+                ¿No tienes cuenta? <a href="#">Regístrate Aquí</a>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
