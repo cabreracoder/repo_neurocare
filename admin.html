@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeuroCare Dashboard</title>
     <link rel="stylesheet" href="stylesAdmin.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -13,13 +13,12 @@
         <div class="logo">NEUROCARE</div>
         <nav>
             <ul>
-                <li><a href="./admin.html">Administración</a></li>
+                <li><a href="./admin.html">Dashboard</a></li>
                 <li><a href="../analitica">Analíticas</a></li>
                 <li><a href="./infromacion">Información</a></li>
                 <li><a href="#" class="active">Buscar pacientes</a></li>
             </ul>
         </nav>
-        <button class="btn-gestionar">Gestionar Usuarios</button>
     </header>
 
     <main class="perfilAdmin">
@@ -35,18 +34,18 @@
 
         <section class="roles">
             <div class="tarjeta">
-                <h3>👥Total Pacientes</h3>
+                <h3>👥 Total Pacientes</h3>
                 <p class="cantidad">3</p>
                 <p class="subtexto">Usuarios con rol de pacientes</p>
             </div>
             <div class="tarjeta">
-                <h3>🧑‍⚕️Equipo Médico</h3>
+                <h3>🧑‍⚕️ Equipo Médico</h3>
                 <p class="cantidad">3</p>
                 <p class="subtexto">Médicos especialistas</p>
             </div>
             <div class="tarjeta">
-                <h3>❤️Cuidadores</h3>
-                <p class="cantidad">3</p>
+                <h3>❤️ Cuidadores</h3>
+                <p class="cantidad">2</p>
                 <p class="subtexto">Personal de cuidado</p>
             </div>
         </section>
@@ -57,13 +56,13 @@
                     <h3>👤 Gestión de Usuarios</h3>
                     <p>Administra todos los usuarios del sistema: Pacientes, Médicos y Cuidadores.</p>
                 </div>
-                <button class="btnAgregar">+ Agregar Usuarios</button>
+                <button id="btn_Agregar" class="boton">Agregar Usuarios</button>
             </div>
 
             <div class="filtrosRoles">
-                <button class="btnFiltro activo">🏨 Pacientes (3)</button>
-                <button class="btnFiltro">🩺 Médicos (3)</button>
-                <button class="btnFiltro">❤️ Cuidadores (3)</button>
+                <button id="f-pacientes" class="btnFiltro activo">🏨 Pacientes (3)</button>
+                <button id="f-medicos" class="btnFiltro">🩺 Médicos (3)</button>
+                <button id="f-cuidadores" class="btnFiltro">❤️ Cuidadores (2)</button>
             </div>
 
             <div class="contenedorTabla">
@@ -73,35 +72,29 @@
                             <th>Usuario</th>
                             <th>Contacto</th>
                             <th>Edad</th>
-                            <th>Diagnóstico</th>
+                            <th>Diagnóstico / Especialidad</th>
                             <th>Estado</th>
                             <th>Fecha registro</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    
+                    <tbody id="tabla-pacientes">
                         <tr>
                             <td>Maria Elena Garcia</td>
                             <td class="emailTabla">maria.garcia@gmail.com</td>
                             <td>72 años</td>
                             <td>Alzheimer Moderado</td>
                             <td>
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
                             </td>
                             <td>13/10/2025</td>
                             <td>
-                            <div class="contenedor-acciones">
-                                <button class="btnAccion btnEditar" title="Editar">
-                                    <i class="IconoEditar"></i> 📝
-                                </button>
-                                <button class="btnAccion btnEliminar" title="Eliminar">
-                                    <i class="IconoEliminar"></i> 🗑️
-                                </button>
-                            </div>
-                        </td>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Roberto Fernandez</td>
@@ -109,21 +102,14 @@
                             <td>68 años</td>
                             <td>Alzheimer Leve</td>
                             <td>
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
                             </td>
                             <td>12/10/2025</td>
                             <td>
-                            <div class="contenedor-acciones">
-                                <button class="btnAccion btnEditar" title="Editar">
-                                    <i class="IconoEditar"></i> 📝
-                                </button>
-                                <button class="btnAccion btnEliminar" title="Eliminar">
-                                    <i class="IconoEliminar"></i> 🗑️
-                                </button>
-                            </div>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -132,21 +118,99 @@
                             <td>56 años</td>
                             <td>Alzheimer Severo</td>
                             <td>
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
                             </td>
                             <td>12/10/2025</td>
                             <td>
-                            <div class="contenedor-acciones">
-                                <button class="btnAccion btnEditar" title="Editar">
-                                    <i class="IconoEditar"></i> 📝
-                                </button>
-                                <button class="btnAccion btnEliminar" title="Eliminar">
-                                    <i class="IconoEliminar"></i> 🗑️
-                                </button>
-                            </div>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tbody id="tabla-medicos" style="display: none;">
+                        <tr>
+                            <td>Dr. Carlos Ruiz</td>
+                            <td class="emailTabla">carlos.ruiz@neurocare.com</td>
+                            <td>42 años</td>
+                            <td>Neurología Clínica</td>
+                            <td>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </td>
+                            <td>15/01/2026</td>
+                            <td>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Luis Ortega</td>
+                            <td class="emailTabla">LuisOr12@neurocare.com</td>
+                            <td>53 años</td>
+                            <td>Psicologo Clinico</td>
+                            <td>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </td>
+                            <td>23/03/2025</td>
+                            <td>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dra. Claudia Lasso</td>
+                            <td class="emailTabla">clau032@neurocare.com</td>
+                            <td>42 años</td>
+                            <td>Enfermera Profesional</td>
+                            <td>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </td>
+                            <td>03/10/2025</td>
+                            <td>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tbody id="tabla-cuidadores" style="display: none;">
+                        <tr>
+                            <td>Ana Milena Garzon</td>
+                            <td class="emailTabla">ana.cano@gmail.com</td>
+                            <td>29 años</td>
+                            <td>Asistencia 24/7</td>
+                            <td>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </td>
+                            <td>12/01/2026</td>
+                            <td>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
+                            </td>
+                            <tr>
+                            <td>Andres Mera</td>
+                            <td class="emailTabla">andy.m@gmail.com</td>
+                            <td>31 años</td>
+                            <td>Asistencia 24/7</td>
+                            <td>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </td>
+                            <td>12/01/2026</td>
+                            <td>
+                                <div class="contenedor-acciones">
+                                    <button class="btnAccion btnEditar">📝</button>
+                                    <button class="btnAccion btnEliminar">🗑️</button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -155,5 +219,64 @@
         </section>
     </main>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // 1. Redirección Botón Agregar
+        const btnAgregar = document.getElementById("btn_Agregar");
+        if (btnAgregar) {
+            btnAgregar.addEventListener("click", () => window.location.href = "agregar_usuario.html");
+        }
+
+        // 2. Lógica de Filtros CORREGIDA
+        const bPacientes = document.getElementById("f-pacientes");
+        const bMedicos = document.getElementById("f-medicos");
+        const bCuidadores = document.getElementById("f-cuidadores");
+
+        const tPacientes = document.getElementById("tabla-pacientes");
+        const tMedicos = document.getElementById("tabla-medicos");
+        const tCuidadores = document.getElementById("tabla-cuidadores");
+
+        function mostrarTabla(tablaActiva, botonActivo) {
+            // Ocultar todas las secciones
+            tPacientes.style.display = "none";
+            tMedicos.style.display = "none";
+            tCuidadores.style.display = "none";
+
+            // Mostrar la seleccionada
+            tablaActiva.style.display = "table-row-group";
+
+            // Manejar clase CSS activa en botones
+            [bPacientes, bMedicos, bCuidadores].forEach(btn => btn.classList.remove("activo"));
+            botonActivo.classList.add("activo");
+        }
+
+        // Eventos de clic
+        if(bPacientes) bPacientes.addEventListener("click", () => mostrarTabla(tPacientes, bPacientes));
+        if(bMedicos) bMedicos.addEventListener("click", () => mostrarTabla(tMedicos, bMedicos));
+        if(bCuidadores) bCuidadores.addEventListener("click", () => mostrarTabla(tCuidadores, bCuidadores));
+
+        // Confirmación para desactivar usuarios
+        document.addEventListener('change', function(e) {
+        if (e.target.closest('.switch') && e.target.type === 'checkbox') {
+        var checkbox = e.target;
+        var fila = checkbox.closest('tr');
+        var nombreUsuario = fila.cells[0].innerText; // Toma el nombre de la primera celda
+
+        if (!checkbox.checked) {
+            // Si el usuario intenta desactivarlo
+            var mensajeConfirmar = "¿Estás seguro de que deseas desactivar a " + nombreUsuario + "?";
+            var confirmar = confirm(mensajeConfirmar);
+            
+            if (!confirmar) {
+                checkbox.checked = true; // Si cancela, volvemos a activar el switch
+            }
+        } else {
+            // Si intenta activarlo de nuevo
+            alert(nombreUsuario + " ha sido activado correctamente.");
+        }
+    }
+});
+    });
+</script>
 </body>
 </html>
