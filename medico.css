@@ -1,0 +1,131 @@
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #b8ecef;
+        overflow-y: scroll;
+    }
+
+
+    .header {
+        background: #E6E6E6;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .header nav .active {
+        background: #bfe7f5;
+        padding: 8px 14px;
+        border-radius: 10px;
+    }
+    .usuario {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .avatar1 {
+        background: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        font-weight: bold;
+        color: #333;
+    }
+
+    #salir {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        cursor: pointer;
+    }
+
+
+    #main {
+        padding: 20px;
+    }
+
+    #bienvenida {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    #resumen {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        padding: 15px;
+        width: 230px;
+    }
+
+
+    #contenedor-secundario {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    #pacientes, #citas {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 15px;
+        flex: 1;
+        min-width: 350px;
+    }
+
+    .paciente, .cita {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 8px;
+        margin: 8px 0;
+        background-color: #fafafa;
+    }
+
+    .estado {
+        float: right;
+        padding: 3px 7px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+
+    .estable { background-color: #05ff22; }
+    .atencion { background-color: #fff07b; }
+    .mejorando { background-color: #9fd7ff; }
+
+   
+    #recordatorios {
+        background-color: #ffffff;
+        margin: 30px 20px;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    #recordatorios h2 {
+        margin-top: 0;
+    }
+
+    .recordatorio1 {
+        background-color: #f6f6f6;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+    }
